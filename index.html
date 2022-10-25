@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Una cafetería donde podrás pasar tiempo con gatitos, comer algo rico y adoptar uno de los mininos.">
+    <meta name="keywords"
+        content="cafetería,gatos,adopción de gatitos,café,postres,tortas,gatitos,adopción responsable">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Katty, Sebas & Mary">
+
+    <link rel="icon" href="img/logos/gato-verde.ico">
+    <link rel="apple-touch-icon" href="img/logos/gato-verde.ico">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script defer src="js/custom.js"></script>
+    <script defer src="js/popup.js"></script>
+    <script defer src="js/card_home.js"></script>
+
+    <script>
+        (function (d) {
+            var s = d.createElement("script");
+            s.setAttribute("data-account", "0kNsWHL0Lh");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document)
+    </script>
+
+    <title>Aromas y Maullidos</title>
+</head>
+
+<body onload="introwrite()">
+
+    <!--HEADER - MENÚ-->
+
+    <header id="header" class="header">
+        <nav id="nav" class="nav1 nav">
+
+            <div class="contenedor-nav nav__contenedor">
+                <div class="cont_cat_header">
+                    <div class="cat_header">
+
+                    </div>
+                </div>
+                <div class="logo nav__logo">
+                    <a href="#header">
+                        <img class="nav__img" src="img/logos/logo-dark.png" alt="Ir a página principal"
+                            title="Ir a página principal" width="100px" height="100px">
+                    </a>
+                </div>
+
+                <div class="enlaces nav__links" id="enlaces">
+                    <a id="enlace-menu" class="btn-header nav__link">Menú</a>
+                    <a href="cats.html" id="enlace-gatitos" class="btn-header nav__link">Gatitos</a>
+                    <button id="reserva__button" class="btn-header nav__link">Reserva</button>
+                    <a id="enlace-sobre-nosotros" class="btn-header nav__link">Contacto</a>
+                </div>
+                <div class="icono">
+                    <div class="toggle"></div>
+                </div>
+
+                <div class="carrito">
+                    <a href="carrito.html"><svg xmlns="http://www.w3.org/2000/svg" width="44px" height="34px "
+                            viewBox="0 0 24 24">
+                            <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                            <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                            <path d="M13 13h2v-2.99h2.99v-2H15V5.03h-2v2.98h-2.99v2H13V13z"></path>
+                            <path
+                                d="M10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14l-2.31 6h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav_rspnsv" id="nav_respnsv">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/reserva.svg" alt="Ir a página principal">
+                        <span class="title nav_respnsv_title">Aromas & Maullidos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="enlace-menu_mbl">
+                        <img src="img/icons/menu1.svg"  alt="">
+                        <span class="title">Menú</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cats.html">
+                        <img src="img/icons/adopcion3.svg"  alt="Ir a página de adopción de gatitos.">
+                        <span class="title">Gatitos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="reserva__button_mbl">
+                        <img src="img/icons/reserva2.svg" alt="Reserva con nosotros.">
+                        <span class="title">Reserva</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="enlace-sobre-nosotros_mbl">
+                        <img src="img/icons/contacto.svg"  alt="Ir a contacto">
+                        <span class="title">Contacto</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="carrito.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44px" height="34px " viewBox="0 0 24 24">
+                            <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                            <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                            <path d="M13 13h2v-2.99h2.99v-2H15V5.03h-2v2.98h-2.99v2H13V13z"></path>
+                            <path d="M10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14l-2.31 6h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17z">
+                            </path>
+                        </svg>
+                        <span class="title">Carrito</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="header__title">Aromas <br> y <br> Maullidos</h1>
+    </header>
+
+    <h1 class="header__title header__title_rspnsv">Aromas <br> y <br> Maullidos</h1>
+
+    <!-- INTRO-->
+
+    <main class="main main_mobile">
+        <section class="container intro">
+            <div class=" contenedor__intro  intro__container">
+                <div class="imgs intro__bg">
+                    <img class="img1 intro__img" src="img/lugar/1.webp" alt="">
+                </div>
+                <div class="imgs intro__bg">
+                    <img class="img2 intro__img" src="img/lugar/2.webp" alt="">
+                </div>
+                <div class="imgs intro__bg">
+                    <img class="img3 intro__img" src="img/lugar/4.webp" alt="">
+                </div>
+            </div>
+            <div class="parrafo__intro intro__text">
+                <p id="maquina-escribir4" class="intro__paragraph">
+                    En Aromas & Maullidos somos amantes del café, de crear bonitos recuerdos pero sobre todo de los gatos, por esa razón contamos con una zona exclusiva para que puedas disfrutar de la compañia de
+                    gatitos adoptables y degustar de nuestro menú.
+                </p>
+            </div>
+        </section>
+
+    <!-- MÉNU CAFÉ-->
+
+        <div class="headers" id="menu_container">
+            <h2 class="headers__title">Nuestro Menú</h2>
+        </div>
+
+        <section class="section_menu container">
+            <div class="menu">
+                <div class="menu__item item1  menu__item--1">
+                    <img src="./img/menu/cafe.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Cafe de Especialidad</h2>
+                    <p class="menu__description">Seleccionamos, tostamos, preparamos y servimos café de especialidad.
+                        Disfruta de todas nuestras variedades. Bebidas frías y calientes.</p>
+                </div>
+                <div class="menu__item item2  menu__item--2">
+                    <img src="./img/menu/croissant.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Brunch</h2>
+                    <p class="menu__description">Una opción que incluye distintas opciones dulces y saladas para dos personas. Disponible los fines de semana.</p>
+                </div>
+                <div class="menu__item item3  menu__item--3">
+                    <img src="./img/menu/granos.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Vegan</h2>
+                    <p class="menu__description">Encontrá nuestras deliciosas opciones veganas. Sano y natural. Sin
+                        crueldad animal.</p>
+                </div>
+                <div class="menu__item item4  menu__item--4">
+                    <img src="./img/menu/takeaway.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Take Away</h2>
+                    <p class="menu__description">Compra en nuestra tienda online y retira tu pedido en menos de 24h.</p>
+                </div>
+                <div class="menu__item item5  menu__item--5">
+                    <img src="./img/menu/copa.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Postres</h2>
+                    <p class="menu__description">Nuestra pastelería es de excelencia, con una presentación cuidada y
+                        pensada para deleitarte.</p>
+                </div>
+                <div class="menu__item item6  menu__item--6">
+                    <img src="./img/menu/torta2.png" alt="" class="menu__img">
+                    <h2 class="menu__title">Tortas</h2>
+                    <p class="menu__description">Las mejores tortas enteras para una ocación especial. Ricas, con
+                        sabores caseros, que confortan a quien la pruebe. </p>
+                </div>
+            </div>
+        </section>
+
+    <!-- GALERIA DE IMAGENES-->
+
+        <section class="container">
+            <div class="cafes">
+                <figure class="cafes__item " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/cupcake.webp"
+                        alt="Cupcake de chocolate con crema de maní y bombón de chocolate arriba" class="cafes__img"
+                        loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+
+
+                    <img src="./img/comidas/cafe.webp" data-aos="zoom-in-up" alt="Café en una taza negra con arte latte"
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--tall" data-aos="zoom-in">
+                    <img src="./img/comidas/brunch.webp"
+                        alt="Brunch sobre una mesa con diferentes platos. Ensalada de pollo, tostada con huevo, frutas,waffles con crema."
+                        class="cafes__img" loading="lazy">
+                </figure>
+                <figure class="cafes__item cafes__item--wide" data-aos="zoom-out">
+                    <img src="./img/comidas/coffee-cat2_3.webp" alt="Gato anaranajdo mirando una taza de cafe"
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/cafe2.webp" alt="Taza de cafe color blanca con arte latte"
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--tall" data-aos="zoom-in">
+                    <img src="./img/comidas/croissants.webp" alt="Croissants" class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--big" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="300" data-aos-offset="0">
+                    <img src="./img/comidas/cafes5.webp"
+                        alt="Dos tazas de cafe con arte latte color blanca y roja. Porción de budin." class="cafes__img"
+                        loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/pancake2.webp" alt="Dos torres de pancakes con frambruesas y arandanos."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--wide" data-aos="zoom-out">
+                    <img src="./img/comidas/coffee-cat.webp"
+                        alt="Gato gris sentado en la acera cerca de una mesa y silla. Mirando hacia arriba."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--big" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="300" data-aos-offset="0">
+                    <img src="./img/comidas/brunch1.webp"
+                        alt="Mesa con varios platos de waffles, huevos fritos,croissant, jugo de naranja,pancakes con salsa de frutos rojos y taza de café."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/redvelvet.webp"
+                        alt="Cupcake de bizcochuelo rojo con crema de chocolate blanco y decoración en rojo"
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/frappe-cookie.webp"
+                        alt="Jarra de café frio con crema arriba, dos galletas y salsa de chocolate." class="cafes__img"
+                        loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--tall" data-aos="zoom-in">
+                    <img src="./img/comidas/avotoast.webp"
+                        alt="Tostadas con aguacate pisado y ensalada de hojas verdes." class="cafes__img"
+                        loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/french-toast.webp"
+                        alt="Tostadas francesas con rodajas de banana y arandanos." class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--tall" data-aos="zoom-in">
+                    <img src="./img/comidas/cheesecake-cat.webp"
+                        alt="Gato gris sentado en una silla mirando hacia arriba y delante una porción de cheesecake con frutillas."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/frappe.webp"
+                        alt="Café frío de chocolate con crema y salsa de chocolate sobre un plato blanco."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--wide" data-aos="zoom-out">
+                    <img src="./img/comidas/coffee-cat2.webp" alt="Gato blanco y marron oliendo una taza blanca"
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/brunch3.webp"
+                        alt="Brunch sobre una mesa rosa con tostadas, huevos, ensalada de hojas verdes, café con leche, jugo de naranja."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/pancake.webp" alt="Pancakes con arandanos y frutillas." class="cafes__img"
+                        loading="lazy" />
+                </figure>
+                <figure class="cafes__item cafes__item--wide" data-aos="zoom-out">
+                    <img src="./img/comidas/cupcakes.webp" alt="Vista de cerca a cupcakes con crema turquesa y lila."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+                <figure class="cafes__item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="130"
+                    data-aos-offset="0">
+                    <img src="./img/comidas/cafes4.webp"
+                        alt="Una mano sosteniendo una taza de cafe cuando vierte leche sobre ella creando arte latte."
+                        class="cafes__img" loading="lazy" />
+                </figure>
+            </div>
+
+            <button id="load_more" class="button button-viewmore">Ver más</button>
+
+        </section>
+
+        <!-- Adopción -->
+
+        <div class="headers" id="menu_container">
+            <h2 class="headers__title">Gatitos en adopción</h2>
+            <p class="headers__p">
+                Como amantes de los gatos nuestra meta es facilitar la adopción responsable de aquellos que están de inquilinos en nuestra cafetería y andan necesitando una familia. <br> En Aromas y Maullidos podrás conocerlos, pasar un rato con ellos y si conectas con alguno... adoptarlo. <br>
+                Todos los michis están preparados para darse en adopción: Solo necesitan un hogar y mucho amor.
+            </p>
+        </div>
+
+        <!-- Slider Box -->
+
+        <section class="content adopcion">
+
+            <div class="slider_cats adopcion__container" id="slider_cats_cont" data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"            
+            data-aos-once="true"
+            >
+
+<!-- 
+
+                <div class="cont_box_slider_cat_display adopcion__display">
+
+                    <div class="box_slider_cat_display card">
+
+                        <div class="slider_cat_text card__text">
+
+                            
+                                        <div class="card-body">
+                                            <h5 class="nombre-card-body" id="nombre"></h5>
+                                            <ul>
+                                                <li>
+                                                    <p class="sub-nombre">Edad:</p>
+                                                    <p class="sub-resultado" id="edad"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Sexo:</p>
+                                                    <p class="sub-resultado" id="sexo"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Color: </p>
+                                                    <p class="sub-resultado" id="color"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Esterilización:</p>
+                                                    <p class="sub-resultado" id="este"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Vacunas:</p>
+                                                    <p class="sub-resultado" id="vacu"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Discapacidad:</p>
+                                                    <p class="sub-resultado" id="dis"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Salud:</p>
+                                                    <p class="sub-resultado" id="salu"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                            <button class="button button-adopt  card__button" id="btn_slider">Adoptame</button>
+                        </div>
+                        <div class="slider_cat_display  card__cats">
+                            <img   src="img/cat2.jpg" class="card__img">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cont_box_slider_cat_display adopcion__display">
+                    <div class="box_slider_cat_display card">
+
+                        <div class="slider_cat_text card__text">
+                            
+                                        <div class="card-body">
+                                            <h5 class="nombre-card-body" id="nombre"></h5>
+                                            <ul>
+                                                <li>
+                                                    <p class="sub-nombre">Edad:</p>
+                                                    <p class="sub-resultado" id="edad"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Sexo:</p>
+                                                    <p class="sub-resultado" id="sexo"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Color: </p>
+                                                    <p class="sub-resultado" id="color"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Esterilización:</p>
+                                                    <p class="sub-resultado" id="este"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Vacunas:</p>
+                                                    <p class="sub-resultado" id="vacu"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Discapacidad:</p>
+                                                    <p class="sub-resultado" id="dis"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Salud:</p>
+                                                    <p class="sub-resultado" id="salu"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                            <button class="button button-adopt  card__button" id="btn_slider">Adoptame</button>
+                        </div>
+                        <div class="slider_cat_display slider_reorder_cat  card__cats">
+                            <img src="img/cat3.jpg" class="card__img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont_box_slider_cat_display adopcion__display">
+                    <div class="box_slider_cat_display card">
+
+                        <div class="slider_cat_text card__text">
+                            
+                                        <div class="card-body">
+                                            <h5 class="nombre-card-body" id="nombre"></h5>
+                                            <ul>
+                                                <li>
+                                                    <p class="sub-nombre">Edad:</p>
+                                                    <p class="sub-resultado" id="edad"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Sexo:</p>
+                                                    <p class="sub-resultado" id="sexo"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Color: </p>
+                                                    <p class="sub-resultado" id="color"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Esterilización:</p>
+                                                    <p class="sub-resultado" id="este"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Vacunas:</p>
+                                                    <p class="sub-resultado" id="vacu"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Discapacidad:</p>
+                                                    <p class="sub-resultado" id="dis"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Salud:</p>
+                                                    <p class="sub-resultado" id="salu"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                            <button class="button button-adopt  card__button" id="btn_slider">Adoptame</button>
+                        </div>
+                        <div class="slider_cat_display  card__cats">
+                            <img src="img/cat5.jpg" class="card__img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont_box_slider_cat_display adopcion__display">
+                    <div class="box_slider_cat_display card">
+
+                        <div class="slider_cat_text card__text">
+                            
+                                        <div class="card-body">
+                                            <h5 class="nombre-card-body" id="nombre"></h5>
+                                            <ul>
+                                                <li>
+                                                    <p class="sub-nombre">Edad:</p>
+                                                    <p class="sub-resultado" id="edad"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Sexo:</p>
+                                                    <p class="sub-resultado" id="sexo"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Color: </p>
+                                                    <p class="sub-resultado" id="color"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Esterilización:</p>
+                                                    <p class="sub-resultado" id="este"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Vacunas:</p>
+                                                    <p class="sub-resultado" id="vacu"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Discapacidad:</p>
+                                                    <p class="sub-resultado" id="dis"></p>
+                                                </li>
+                                                <li>
+                                                    <p class="sub-nombre">Salud:</p>
+                                                    <p class="sub-resultado" id="salu"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                            <button class="button button-adopt  card__button" id="btn_slider">Adoptame</button>
+                        </div>
+                        <div class="slider_cat_display slider_reorder_cat  card__cats">
+                            <img src="img/proxy.jpg" class="card__img">
+                        </div>
+
+                    </div>
+                </div> -->
+            </div>
+            <!-- SLIDER GATITOS-->
+    
+            <aside class="cont_slider_cats_box" 
+                data-aos="fade-left"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine"
+                data-aos-once="true">
+                <div class="cont_slider_cats hidden_rgth  slider-cats slider_cats--hidden
+" 
+                >
+
+                    <div class="box_slider_cats   slider-cats__container" >
+    
+                    <ul id="list_cats">
+    
+                    </ul>
+                </div>
+                <div class="box_slider_cats box_slider_cats_rspnsv   slider-cats__container">
+    
+                    <ul id="list_cats_rspnsv">
+     
+                    </ul>
+                </div>
+            </div>
+            </aside>
+        </section>
+
+
+
+        <!-- SECCIÓN ABOUT US-->
+
+        <section class="aboutus container" id="aboutus">
+
+            <div class="aboutus__contact">
+                <h3 class="aboutus__title">Contacto</h3>
+                <ul class="contact">
+                    <li class="contact__item"><i class='bx bxs-map contact__icon'></i>
+                        Magnetic Springs, Ohio, EE. UU.
+                    </li>
+                    <li class="contact__item"><i class='bx bxs-calendar contact__icon'></i>
+                        Lunes a Domingos. De 9am a 20pm.</li>
+
+                    <li class="contact__item"><i class='bx bxs-phone contact__icon'></i>
+                        999-999
+                    </li>
+                    <li class="contact__item"><i class='bx bxs-envelope contact__icon'></i>
+                        contacto@aromasymaullidos.com
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="map">
+
+                <iframe class="map__iframe" frameborder="0" scrolling="no"
+                    src="https://maps.google.com/maps?q=Magnetic%20Springs&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    title="nuestra ubicacion en google maps">
+
+                </iframe>
+
+            </div>
+
+
+            <form class="form" action="https://formspree.io/f/xlevwyzj" method="POST">
+
+
+                <h4 class="form__title"> Nuestro newsletter</h4>
+                <p class="form__paragraph">Inscribete para recibir todas las novedades.</p>
+
+
+                <div class="form__container ">
+
+                    <label for="form__name" class="form__label">Nombre</label>
+                    <input type="text" class="form__name input-nws input--error" id="form__name" name="name"
+                        placeholder="Nombre" required>
+
+
+                    <label for="form__email" class="form__label">Email</label>
+                    <input type="email" class="form__email input-nws input--error" id="form__email"
+                        placeholder="nombre@correo.com" name="email" required>
+
+                </div>
+
+
+                <button type="submit" class="form__button button" id="form__button">Inscribirse</button>
+
+
+            </form>
+        </section>
+
+        
+        <!--POPUP ADOPCIÓN-->
+
+        <div class="overlay overlay_form" id="">
+            <div class="popup popup_form    popup" id="">
+                <div class="btn-cerrar-popup   popup__cerrar"><i class="fas fa-times   popup__icon"></i></div>
+
+                <img src="img/logos/logo-dark.png" alt="" width="80px" class="popup__logo">
+                <h3 class="popup__title">Formulario de Adopción</h3>
+
+                <form class="form-adopcion" action="" id="form_adopt" novalidate>
+
+
+                    <div class="contenedor-inputs  form-adopcion__container">
+
+                        <input class="input-adopt adopt__input" type="text" name="" id="nom_adopt" placeholder="Nombre">
+                        <input class="input-adopt adopt__input" type="email" name="" id="eml_adopt"
+                            placeholder="nombre@correo.com">
+                        <input class="input-adopt adopt__input" type="tel" name="" id="tel_adopt"
+                            placeholder="0123456789">
+                    </div>
+
+                    <button type="submit" class="btn-submit button button-adopt  form-adopcion__button">Enviar</button>
+
+                    <div class="mensajes form-adopcion__msg">
+                        <p class="advertencias form-adopcion__p" id="advertencias"></p>
+                        <p class="enviar form-adopcion__enviar" id="enviar"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- BOTON WHATSAPP -->
+
+                <a href="https://api.whatsapp.com/send?phone=34111223344" class="whatsapp__icon"
+            alt="Comunicate con nosotros vía whatsapp" target="_blank" title="Comunicate con nosotros vía whatsapp"></a>
+        <!-- <i class='bx bx-up-arrow-alt arrow_up'></i> -->
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer         footer">
+
+        <div class="container-box-footer         footer__container">
+            <div class="logo__footer   footer__logo">
+                <a href="#header"><img src="img/logos/light_pink.png" class="footer__img" alt="Ir a página principal"width="128px"></a>
+            </div>
+
+            <div class="subtitulo__footer      footer__title">
+                <h3>Aromas y Maullidos</h3>
+            </div>
+
+            <div class="iconos__footer    footer-social">
+
+
+                <div class="cont_iconos_footer   footer-social__container">
+
+
+                    <div class="icono_ftr instagram    footer__ig">
+                        <a href="#" class="footer__link" title="Ir a nuestro perfil de instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="icono_ftr whatsaap   footer__whatsapp">
+                        <a href="#" class="footer__link" title="Escribenos por whatsapp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <div class="icono_ftr twitter    footer__twitter">
+                        <a href="#" class="footer__link" title="Ir a nuestro Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+
+                    <div class="icono_ftr facebook     footer__facebook">
+                        <a href="#" class="footer__link" title="Ir a nuestra página de Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parrafo__footer    footer-text">
+
+        <p class="footer__p   footer-text__p">Copyright &copy; 2022 Autores:
+            <a href="https://github.com/sebasgarzons" class="autores   footer-text__autores"
+                title="Ir a github de Sebastián">Sebastian</a> -
+            <a href="https://github.com/Janselin" class="autores   footer-text__autores"
+                title="Ir a github de Mary">Mary</a> -
+            <a href="https://github.com/kaymikatty" class="autores   footer-text__autores"
+                title="Ir a github de Katherine">Katherine</a>.
+            Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+
+
+
+    <!-- LOADER-->
+
+    <div class="loader_cont" id="loader_cont_id">
+        <div class="loader_box        loader__box">
+            <span class="loader     loader__icon"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- MODAL RESERVA -->
+
+    <div class="modal" id="email-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+
+
+            <div class="modal-content-left">
+                <img src="img/modal-cat.webp" alt="Un gato gris sentado a la mesa mirando un plato de pancakes."
+                    class="modal-img">
+            </div>
+
+            <div class="modal-content-right">
+                <form action="/" method="GET" class="modal-form" id="form-reserva">
+                    <img src="img/logos/logo-dark.png" alt="" width="80px">
+                    <h1>Haz tu reserva</h1>
+
+                    <div class="form-validation-reserva">
+                        <input type="text" class="modal-input" id="reserva-name" name="nombre" placeholder="Nombre">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-validation-reserva">
+                        <input type="email" class="modal-input" id="reserva-email" name="email"
+                            placeholder="nombre@correo.com">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-validation-reserva">
+                        <input type="tel" class="modal-input" id="reserva-phone" name="telefono" placeholder="999-999">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-date">
+                        <div class="form-validation-reserva">
+                            <input type="date" class="modal-input" id="reserva-date" name="fecha">
+                            <p>Error Message</p>
+                        </div>
+
+                        <div class="form-validation-reserva">
+                            <input type="time" class="modal-input" id="reserva-time" name="hora" min="09:00"
+                                max="18:00">
+                            <p>Error Message</p>
+                        </div>
+                    </div>
+
+
+
+                    <input type="submit" class=" button modal-input-btn" value="Reservar">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

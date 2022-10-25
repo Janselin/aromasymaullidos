@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Una cafetería donde podrás pasar tiempo con gatitos, comer algo rico y adoptar uno de los mininos.">
+    <meta name="keywords"
+        content="cafetería,gatos,adopción de gatitos,café,postres,tortas,gatitos,adopción responsable">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Katty, Sebas & Mary">
+    <link rel="icon" href="img/logos/gato-verde.ico">
+    <link rel="apple-touch-icon" href="img/logos/gato-verde.ico">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/popup.css" rel="stylesheet">
+    <link href="css/cats.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script defer src="js/card_landing.js"></script>
+    <script defer src="js/requests.js"></script>
+    <script defer src="js/popup.js"></script>
+
+    <title>Página de adopción</title>
+</head>
+
+
+<header class="contenedor-header   header" id="header">
+    <nav>
+        <div class="logo      header__logo">
+            <a href="index.html" class="header__link"><img src="img/logos/logo-dark.png" alt="" width="100px"
+                    class="header__logo"></a>
+        </div>
+        <div>
+            <h1 class="header__title">Aromas y Maullidos</h1>
+        </div>
+        <div class="go_home">
+            <a href="index.html" class="carrito__link"><svg class="carrito__logo" xmlns="http://www.w3.org/2000/svg"
+                    width="44" height="34" viewBox="0 0 24 24">
+                    <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path>
+                </svg></a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!-- Cats -->
+    <aside class="top grid">
+        <h2>Ven y Adopta un Compañero de por vida!</h2>
+    </aside>
+
+    <!-- Cats Filter -->
+    <section class="cont_cats grid">
+        <div class="container__filtro">
+            <h3 class="filtro__title">Filtrar por:</h3>
+            <h3 class="filtro__title filtro__title__rspnsv">Filtrar por: (Click Aquí)</h3>
+            <div class="color_list color_list_rspnsv">
+                <span class="close_filters">
+                    <svg class="carrito__logo" xmlns="http://www.w3.org/2000/svg" width="44" height="34"
+                        viewBox="0 0 24 24">
+                        <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z">
+                        </path>
+                    </svg>
+                </span>
+                <ul class="list">
+                    <li class="list__item">
+                        <div>
+                            <label class="list__label" for="color">Color:</label>
+                            <select id="filtro_color" name="color" class="filtro">
+                                <option value="gris" id="filtro_color_gris">Gris</option>
+                                <option value="amarillo" id="filtro_color_amarillo">Amarillo</option>
+                                <option value="blanco" id="filtro_color_blanco">Blanco</option>
+                                <option value="negro" id="filtro_color_negro">Negro</option>
+                                <option value="cafe" id="filtro_color_cafe">Cafe</option>
+                                <option value="naranja" id="filtro_color_naranja">Naranja</option>
+                            </select>
+                        </div>
+                        <button class="button filtro__button" id="filter_cat_color">Buscar por Color</button>
+                    </li>
+                    <li class="list__item">
+                        <div>
+                            <label class="list__label" for="checkbox">Sexo:</label>
+                            <div class="div__check">
+                                <div class="check__list">
+                                    <input class="checksex checksexm" type="checkbox" title="macho" id="checkm"
+                                        name="sex_m" onchange="check_sex_chck()">
+                                    <label for="checkm" class="checkp">Macho</label>
+                                </div>
+                                <div class="check__list">
+                                    <input class="checksex" type="checkbox" title="hembra" id="checkh" name="sex_h"
+                                        onchange="check_sex_chck()">
+                                    <label for="checkh" class="checkp">Hembra</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button filtro__button" id="filter_cat_sex">Buscar por Sexo</button>
+                    </li>
+                    <li class="list__item">
+                        <div>
+                            <label class="list__label" for="edad">Edad:</label>
+                            <div>
+                                <input type="range" id="filtro_edad_range_min" min="0" max="15"
+                                    onchange="getvaluerange()">
+                                <p>Mayor que <span id="min_edad"></span></p>
+                            </div>
+                            <div>
+                                <input type="range" id="filtro_edad_range_max" min="0" max="15"
+                                    onchange="getvaluerange()">
+                                <p>Menor que <span id="max_edad"></span></p>
+                            </div>
+                        </div>
+                        <button class="button filtro__button" id="filter_cat_age">Buscar por Edad</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- <button class="button filtro__button" id="filter_cat">Buscar</button> -->
+        </div>
+
+        <!-- Cats Show-->
+        <div class="cont_cards" id="add_cats"></div>
+    </section>
+    <section class="grid cont_cats_adopted">
+        <h2>Los que ya encontraron Hogar:</h2>
+        <div class="box_cats_adopted">
+            <div id="cats_adopted"></div>
+        </div>
+    </section>
+    <div class="overlay overlay_form">
+        <div class="popup popup_form">
+            <div class="btn-cerrar-popup">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <img src="img/logos/logo-dark.png" alt="" width="80px" class="popup__logo">
+            <h3 class="popup__title">Formulario de Adopción</h3>
+
+            <form class="form-adopcion" action="" id="form_adopt" novalidate>
+                <div class="contenedor-inputs">
+                    <input class="input-adopt" type="text" name="" id="nom_adopt" placeholder="Nombre">
+                    <input class="input-adopt" type="email" name="" id="eml_adopt"
+                        placeholder="nombre@correo.com">
+                    <input class="input-adopt" type="tel" name="" id="tel_adopt" placeholder="0123456789">
+                </div>
+
+                <button type="submit" class="btn-submit button">Enviar</button>
+
+                <div class="mensajes">
+                    <p class="advertencias" id="advertencias"></p>
+                    <p class="enviar" id="enviar"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="container-footer">
+        <div class="container-box-footer">
+            <div class="logo__footer">
+                <a href="#header">
+                    <img src="img/logos/light_pink.png" class="footer__img" alt="Ir a página principal" width="128px">
+                </a>
+            </div>
+            <div class="subtitulo__footer">
+                <h3>Aromas y Maullidos</h3>
+            </div>
+            <div class="iconos__footer">
+                <div class="cont_iconos_footer">
+                    <div class="icono_ftr instagram">
+                        <a href="#" class="footer__link" title="Ir a nuestro perfil de instagram">
+                            <i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="icono_ftr whatsaap">
+                        <a href="#" class="footer__link" title="Escribenos por whatsapp">
+                            <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="icono_ftr twitter">
+                        <a href="#" class="footer__link" title="Ir a nuestro Twitter">
+                            <i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="icono_ftr facebook">
+                        <a href="#" class="footer__link" title="Ir a nuestra página de Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parrafo__footer">
+        <p class="footer__p">Copyright &copy; 2022 Autores:
+            <a href="https://github.com/sebasgarzons" class="autores  footer-text__autores"
+                title="Ir a github de Sebastián">Sebastian</a> -
+            <a href="https://github.com/Janselin" class="autores  footer-text__autores"
+                title="Ir a github de Mary">Mary</a> -
+            <a href="https://github.com/kaymikatty" class="autores  footer-text__autores"
+                title="Ir a github de Katherine">Katherine</a>.
+            Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+</html>
